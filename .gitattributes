@@ -1,0 +1,14 @@
+sensor_data/anonymized.csv filter=lfs diff=lfs merge=lfs -text
+sensor_data filter=lfs diff=lfs merge=lfs -text
+time-series-2/label_test.npy filter=lfs diff=lfs merge=lfs -text
+time-series-2/label_train.npy filter=lfs diff=lfs merge=lfs -text
+time-series-2/label_val.npy filter=lfs diff=lfs merge=lfs -text
+time-series-2/X_test.npy filter=lfs diff=lfs merge=lfs -text
+time-series-2/X_train.npy filter=lfs diff=lfs merge=lfs -text
+time-series-2/X_val.npy filter=lfs diff=lfs merge=lfs -text
+time-series-3/X_test.npy filter=lfs diff=lfs merge=lfs -text
+time-series-3/X_train.npy filter=lfs diff=lfs merge=lfs -text
+time-series-3/X_val.npy filter=lfs diff=lfs merge=lfs -text
+time-series-3/label_test.npy filter=lfs diff=lfs merge=lfs -text
+time-series-3/label_train.npy filter=lfs diff=lfs merge=lfs -text
+time-series-3/label_val.npy filter=lfs diff=lfs merge=lfs -text

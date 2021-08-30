@@ -1,0 +1,23 @@
+This is a description for the data sets
+
+There are 5 npy files, 3 of them are input files for train/val/test, and rest 2 are output labels for train/val. 
+The output labels are hidden, and the final score is calculated based on the average ROC-AUC calculated based on the hidden labels and your predictions
+
+Input structure: the inputs are three dimensional data with structure [sample, time-step, feature]. 
+Each sample is mapped to a row in the output labels
+There are two kinds of features, float and integer, and the last feature is padding indicator (if the value is 1, this time-step is a padding)
+Float features are scaled numerical features (column 727-815), and integer features are one-hot encoded categorical features (column 0-726)
+The time-series are very short, you can manipulate it as you wish for the final prediction
+
+Output structure: the output labels are two dimensional data with structure [sample, label]
+The output contains several binary classification tasks, each task has two columns, eg. [task_0_negative, task_0_positive, task_1_negative, task_1_positive...]
+For each pair of the columns, the values could be positive (0,1), negative (1,0), and missing (0,0)
+
+Evaluation:
+To calculate the average ROC-AUC, you need to calculate the AUC for each task, for the corresponding non-missing labels, and get an weighted average for all the tasks.
+Example:
+In the case of these labels: [[1,0,0,0],[1,0,0,1],[0,1,0,0]], there are two tasks. First task has 3 samples (1 positive and 2 negative), and second task has one sample (positive).
+The AUC for task 1 is calculated based on the first two columns of the labels, and last two columns for task 2.
+The average AUC = (3*AUC1 + AUC2)/4
+* Note that these are noisy real-world data, and the train/val/test are not guarentteed for similar distribution, it's reasonable to aim at an AUC ~0.7
+* For questions about the data, email to chao.1.zhang@seagate.com
