@@ -1,6 +1,6 @@
 # Seagate Soft Sensing Data sets
 
-These data sets are queried from Seagate manufacturing factory database. The factories manufactures AlTiC substrates and cut into sliders for assembly of hard drives. A high-level manufacturing process is shown below. 
+These data sets are queried from Seagate wafer manufacturing data lake. The factories manufactures AlTiC substrates and cut into sliders for assembly of hard drives. A high-level manufacturing process is shown below. 
 
 <div align="center">
 <img src="Images/wafer_manufacture.png" alt="drawing" width="300"/>
