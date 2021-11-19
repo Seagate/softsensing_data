@@ -69,7 +69,6 @@ Given there are many-to-many mapping between processes and measurements in each 
 Each measurement contains a few numerical values to indicate the condition of the wafers, and a decision of pass or fail is made based on these numbers. For the sake of simplicity, we only cover the pass/fail information for each measurement. So that each sample of time-series sensor data are mapped to several binary classification labels.
 
 There are 5 npy files, 3 of them are input files for train/val/test, and rest 2 are output labels for train/val. 
-The output labels are hidden(will release in Nov 2021).
 
 Input structure: the inputs are three dimensional data with structure [sample, time-step, feature]. 
 Each sample is mapped to a row in the output labels
